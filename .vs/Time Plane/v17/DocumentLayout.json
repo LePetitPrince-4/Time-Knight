@@ -1,0 +1,124 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Personal Projects\\Time Plane\\Time Plane\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C2FB1873-1277-2A14-B47E-2EC0A9D4A304}|Assembly-CSharp.csproj|C:\\Personal Projects\\Time Plane\\Time Plane\\assets\\camera\\camera script.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2FB1873-1277-2A14-B47E-2EC0A9D4A304}|Assembly-CSharp.csproj|solutionrelative:assets\\camera\\camera script.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2FB1873-1277-2A14-B47E-2EC0A9D4A304}|Assembly-CSharp.csproj|c:\\personal projects\\time plane\\time plane\\assets\\planes\\plane controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2FB1873-1277-2A14-B47E-2EC0A9D4A304}|Assembly-CSharp.csproj|solutionrelative:assets\\planes\\plane controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2FB1873-1277-2A14-B47E-2EC0A9D4A304}|Assembly-CSharp.csproj|C:\\Personal Projects\\Time Plane\\Time Plane\\assets\\bullets\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2FB1873-1277-2A14-B47E-2EC0A9D4A304}|Assembly-CSharp.csproj|solutionrelative:assets\\bullets\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2FB1873-1277-2A14-B47E-2EC0A9D4A304}|Assembly-CSharp.csproj|c:\\personal projects\\time plane\\time plane\\assets\\pacekeeper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2FB1873-1277-2A14-B47E-2EC0A9D4A304}|Assembly-CSharp.csproj|solutionrelative:assets\\pacekeeper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2FB1873-1277-2A14-B47E-2EC0A9D4A304}|Assembly-CSharp.csproj|C:\\Personal Projects\\Time Plane\\Time Plane\\assets\\planes\\planecontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2FB1873-1277-2A14-B47E-2EC0A9D4A304}|Assembly-CSharp.csproj|solutionrelative:assets\\planes\\planecontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2FB1873-1277-2A14-B47E-2EC0A9D4A304}|Assembly-CSharp.csproj|C:\\Personal Projects\\Time Plane\\Time Plane\\assets\\planes\\active plane controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2FB1873-1277-2A14-B47E-2EC0A9D4A304}|Assembly-CSharp.csproj|solutionrelative:assets\\planes\\active plane controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PaceKeeper.cs",
+              "DocumentMoniker": "C:\\Personal Projects\\Time Plane\\Time Plane\\Assets\\PaceKeeper.cs",
+              "RelativeDocumentMoniker": "Assets\\PaceKeeper.cs",
+              "ToolTip": "C:\\Personal Projects\\Time Plane\\Time Plane\\Assets\\PaceKeeper.cs",
+              "RelativeToolTip": "Assets\\PaceKeeper.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAYwBAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T23:36:45.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "bullet.cs",
+              "DocumentMoniker": "C:\\Personal Projects\\Time Plane\\Time Plane\\Assets\\Bullets\\bullet.cs",
+              "RelativeDocumentMoniker": "Assets\\Bullets\\bullet.cs",
+              "ToolTip": "C:\\Personal Projects\\Time Plane\\Time Plane\\Assets\\Bullets\\bullet.cs",
+              "RelativeToolTip": "Assets\\Bullets\\bullet.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBMAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T19:33:37.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Camera Script.cs",
+              "DocumentMoniker": "C:\\Personal Projects\\Time Plane\\Time Plane\\Assets\\Camera\\Camera Script.cs",
+              "RelativeDocumentMoniker": "Assets\\Camera\\Camera Script.cs",
+              "ToolTip": "C:\\Personal Projects\\Time Plane\\Time Plane\\Assets\\Camera\\Camera Script.cs",
+              "RelativeToolTip": "Assets\\Camera\\Camera Script.cs",
+              "ViewState": "AgIAABkAAABAGDhqRvIawC0AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T16:54:07.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Plane Controller.cs",
+              "DocumentMoniker": "C:\\Personal Projects\\Time Plane\\Time Plane\\Assets\\Planes\\Plane Controller.cs",
+              "RelativeDocumentMoniker": "Assets\\Planes\\Plane Controller.cs",
+              "ToolTip": "C:\\Personal Projects\\Time Plane\\Time Plane\\Assets\\Planes\\Plane Controller.cs",
+              "RelativeToolTip": "Assets\\Planes\\Plane Controller.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAQwIYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T15:01:17.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PlaneControls.cs",
+              "DocumentMoniker": "C:\\Personal Projects\\Time Plane\\Time Plane\\Assets\\Planes\\PlaneControls.cs",
+              "RelativeDocumentMoniker": "Assets\\Planes\\PlaneControls.cs",
+              "ToolTip": "C:\\Personal Projects\\Time Plane\\Time Plane\\Assets\\Planes\\PlaneControls.cs",
+              "RelativeToolTip": "Assets\\Planes\\PlaneControls.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T14:58:50.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Active Plane Controller.cs",
+              "DocumentMoniker": "C:\\Personal Projects\\Time Plane\\Time Plane\\Assets\\Planes\\Active Plane Controller.cs",
+              "RelativeDocumentMoniker": "Assets\\Planes\\Active Plane Controller.cs",
+              "ToolTip": "C:\\Personal Projects\\Time Plane\\Time Plane\\Assets\\Planes\\Active Plane Controller.cs",
+              "RelativeToolTip": "Assets\\Planes\\Active Plane Controller.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAuwBgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T14:50:59.938Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
