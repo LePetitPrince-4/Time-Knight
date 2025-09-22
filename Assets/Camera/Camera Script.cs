@@ -5,16 +5,16 @@ using UnityEngine.UIElements;
 
 public class CameraScript : MonoBehaviour
 {
-    [SerializeField]private List<Transform> activePlanes;
+    [SerializeField]private List<Transform> activeKnight;
     private float targetPosition;
 
     // Update is called once per frame
     void Update()
     {
-        if (activePlanes.Count == 2)
+        if (activeKnight.Count == 2)
         {
 
-            Vector2 distanceBetweenPlanes = activePlanes[0].transform.position - activePlanes[1].transform.position;
+            Vector2 distanceBetweenPlanes = activeKnight[0].transform.position - activeKnight[1].transform.position;
             float aspectRatio = Camera.main.aspect;
 
             distanceBetweenPlanes.x = Mathf.Abs(distanceBetweenPlanes.x);
@@ -24,7 +24,7 @@ public class CameraScript : MonoBehaviour
 
 
             Camera.main.orthographicSize = cameraSize;
-            Vector3 position = Vector2.Lerp(activePlanes[0].transform.position, activePlanes[1].transform.position, 0.5f);
+            Vector3 position = Vector2.Lerp(activeKnight[0].transform.position, activeKnight[1].transform.position, 0.5f);
 
             position.z = -10;
 
@@ -32,14 +32,13 @@ public class CameraScript : MonoBehaviour
 
             //position = Vector3.Lerp(gameObject.transform.position, position, Time.unscaledDeltaTime);
 
-            position.y = Mathf.Max(cameraSize, position.y);
 
 
             gameObject.transform.position = position;
-        }else if (activePlanes.Count == 1)
+        }else if (activeKnight.Count == 1)
         {
             Camera.main.orthographicSize = 10;
-            Vector3 position = activePlanes[0].position;
+            Vector3 position = activeKnight[0].position;
             position.z = -10;
 
 
@@ -51,11 +50,11 @@ public class CameraScript : MonoBehaviour
 
     }
 
-    public void RemovePlane(Transform transform)
+    public void RemoveKnight(Transform transform)
     {
-        if (activePlanes.Contains(transform))
+        if (activeKnight.Contains(transform))
         {
-            activePlanes.Remove(transform);
+            activeKnight.Remove(transform);
         }
     }
 }
