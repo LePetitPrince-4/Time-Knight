@@ -172,6 +172,7 @@ MonoBehaviour:
   players:
   - {fileID: 1847094817}
   - {fileID: 1319998489}
+  resetRecently: 0
 --- !u!1 &497736329
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,7 +685,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.123252824, g: 0.13207549, b: 0.031149883, a: 0}
+  m_BackGroundColor: {r: 0.123252824, g: 0.13207549, b: 0.031149883, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
