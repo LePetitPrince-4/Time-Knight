@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2559432213923995890}
-  - component: {fileID: 8089765812836922150}
   - component: {fileID: 8416977316492851493}
   m_Layer: 0
   m_Name: Knight
@@ -27,31 +26,12 @@ Transform:
   m_GameObject: {fileID: 1220812625947244996}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -47.7, y: -39, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3818909954456958798}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8089765812836922150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1220812625947244996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40908a6380b30d7429b32de69686776c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerControls:
-    up: 273
-    down: 274
-    left: 276
-    right: 275
-  knightController: {fileID: 8416977316492851493}
 --- !u!114 &8416977316492851493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,100 +44,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01f17bd5973a8684ca39d7353cf44026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  handler: {fileID: 0}
   knightControls:
     up: 0
     down: 0
     left: 0
     right: 0
-  horseHead: {fileID: 2632372348346536131}
-  Sword: {fileID: 4667380889247334676}
+    compassBased: 0
+    relative: 0
+  HorsePrefab: {fileID: 1873674324957583812, guid: a98c8673c1bb938488b58ece55708a03, type: 3}
   magnitude: 7500
   rotationSpeed: 2500
-  swordSpeed: 1000
   SavedControls: []
   ControlsStepCount: 0
   spawnLocation: {x: 0, y: 0}
-  horse: {fileID: 7049572608285589629}
---- !u!1001 &4173912833690976296
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2559432213923995890}
-    m_Modifications:
-    - target: {fileID: 942318596590434150, guid: a98c8673c1bb938488b58ece55708a03, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 113.12183
-      objectReference: {fileID: 0}
-    - target: {fileID: 942318596590434150, guid: a98c8673c1bb938488b58ece55708a03, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1319.0896
-      objectReference: {fileID: 0}
-    - target: {fileID: 942318596590434150, guid: a98c8673c1bb938488b58ece55708a03, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.8551865
-      objectReference: {fileID: 0}
-    - target: {fileID: 942318596590434150, guid: a98c8673c1bb938488b58ece55708a03, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 942318596590434150, guid: a98c8673c1bb938488b58ece55708a03, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 942318596590434150, guid: a98c8673c1bb938488b58ece55708a03, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 942318596590434150, guid: a98c8673c1bb938488b58ece55708a03, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 942318596590434150, guid: a98c8673c1bb938488b58ece55708a03, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 942318596590434150, guid: a98c8673c1bb938488b58ece55708a03, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 942318596590434150, guid: a98c8673c1bb938488b58ece55708a03, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1873674324957583812, guid: a98c8673c1bb938488b58ece55708a03, type: 3}
-      propertyPath: m_Name
-      value: Horse
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a98c8673c1bb938488b58ece55708a03, type: 3}
---- !u!50 &2632372348346536131 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 2118001547967844587, guid: a98c8673c1bb938488b58ece55708a03, type: 3}
-  m_PrefabInstance: {fileID: 4173912833690976296}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &3818909954456958798 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 942318596590434150, guid: a98c8673c1bb938488b58ece55708a03, type: 3}
-  m_PrefabInstance: {fileID: 4173912833690976296}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &4667380889247334676 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 8730625535804211516, guid: a98c8673c1bb938488b58ece55708a03, type: 3}
-  m_PrefabInstance: {fileID: 4173912833690976296}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7049572608285589629 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6357300864800489557, guid: a98c8673c1bb938488b58ece55708a03, type: 3}
-  m_PrefabInstance: {fileID: 4173912833690976296}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46234efaa95ead04caf674dfe95938ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  horseScript: {fileID: 0}

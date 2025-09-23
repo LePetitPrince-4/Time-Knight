@@ -12,6 +12,8 @@ public class PlayerControls
 
     public KeyCode left;
     public KeyCode right;
+    public bool relative;
+    public bool compassBased;
 }
 [Serializable]
 
