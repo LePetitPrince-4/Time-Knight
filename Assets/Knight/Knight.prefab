@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handler: {fileID: 0}
+  player: {fileID: 0}
   knightControls:
     up: 0
     down: 0
@@ -52,10 +53,12 @@ MonoBehaviour:
     right: 0
     compassBased: 0
     relative: 0
-  HorsePrefab: {fileID: 1873674324957583812, guid: a98c8673c1bb938488b58ece55708a03, type: 3}
+  active: 1
+  horsePrefab: {fileID: 1873674324957583812, guid: a98c8673c1bb938488b58ece55708a03, type: 3}
   magnitude: 7500
-  rotationSpeed: 2500
-  SavedControls: []
-  ControlsStepCount: 0
+  rotation: []
+  velocity: {x: 0, y: 0}
+  forces: []
+  controlsStepCount: 0
   spawnLocation: {x: 0, y: 0}
   horseScript: {fileID: 0}

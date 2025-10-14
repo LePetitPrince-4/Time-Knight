@@ -1,11 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class ActivePlayer : MonoBehaviour
 {
+
+    public int lostHorses;
+    public int score;
     public KnightHandler handler;
     public List<KnightController> knights;
 
@@ -17,11 +21,20 @@ public class ActivePlayer : MonoBehaviour
     public Color horseColour;
     public Color SwordColour;
     public Color RiderColour;
+    public Color NPCRiderColour;
+
+    public FlagPole flagPole;
+
+    public Vector2 directionOfCleanUp;
+    public List<Rigidbody2D> rigidbody2CleanUp;
 
     private void Start()
     {
-        knightController.knightControls.relative = true;
+        knightController.knightControls.relative = playerControls.relative;
+        knightController.knightControls.compassBased = playerControls.compassBased;
+
         
+        flagPole.SetColor(RiderColour,SwordColour);
     }
     
 
@@ -38,6 +51,8 @@ public class ActivePlayer : MonoBehaviour
     
     public void NewKnight()
     {
+        rigidbody2CleanUp.Clear();
+
         GameObject newKnight =  Instantiate(knightPrefab,transform);
         newKnight.transform.localPosition = SpawnPoints[0];
         SpawnPoints.RemoveAt(0);
@@ -49,13 +64,26 @@ public class ActivePlayer : MonoBehaviour
 
 
     }
-    public void RemoveKnight(KnightController knight)
+    
+
+    public void RemoveAllKnights()
     {
-        knights.Remove(knight);
-        if (knights.Count == 0)
+        foreach (KnightController knight in knights)
         {
-            handler.Invoke("NewDay", 1);
+            Destroy(knight?.horseScript);
         }
+        
+        knights.Clear();
+        handler.Invoke("NewDay", 5);
+        handler.EndRound();
+        
+
+    }
+
+    public void KnightHit()
+    {
+        lostHorses++;
+        handler.ScoreUpdate(this);
     }
 
     public void AddKnight(KnightController knight)
@@ -66,6 +94,19 @@ public class ActivePlayer : MonoBehaviour
         }
     }
 
-    
-    
+    public void FixedUpdate()
+    {
+        if (!handler.stillPlaying)
+        {
+            foreach (Rigidbody2D rigidbody in rigidbody2CleanUp)
+            {
+                if (rigidbody)
+                {
+                    rigidbody.velocity = directionOfCleanUp * handler.acceleration;
+                }
+            }
+        }
+            
+        
+    }
 }

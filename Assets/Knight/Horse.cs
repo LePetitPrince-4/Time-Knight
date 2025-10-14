@@ -1,29 +1,58 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class Horse : MonoBehaviour
 {
-    [SerializeField] private float HP;
-    [SerializeField] private float RequiredForAFinalBlow;
-    [SerializeField] private SharpBit swordStabbingCode;
+
+    public KnightHandler handler;
+    [SerializeField] public SharpBit swordStabbingCode;
+    [SerializeField] public SwordHandle swordHandle;
 
      public Rigidbody2D horseHead;
     [SerializeField] private SpriteRenderer sword;
+    [SerializeField] private SpriteRenderer swordHandleRender;
+    
     [SerializeField] private SpriteRenderer rider;
+
+    public const int ArmourStartingValue = 8;
+    public int armourRemaining = 8;
     public bool active;
+    public bool offScript;
     public void Start()
     {
         ActivePlayer player = GetComponentInParent<ActivePlayer>();
-        Color riderColour = player.RiderColour;
-        Color swordColour = player.SwordColour;
+        Color riderColour;
+        Color swordColour;
         Color horseColour = player.horseColour;
 
+        if (active)
+        {
+            riderColour = player.RiderColour;
+            swordColour = player.SwordColour;
+        }
+        else
+        {
+            riderColour = player.NPCRiderColour;
+            swordColour = player.NPCRiderColour;
+        }
 
         SpriteRenderer[] sprites = GetComponentsInChildren<SpriteRenderer>();
         foreach (SpriteRenderer sprite in sprites)
         {
-            if (sprite.gameObject.layer != 11)
+            if (sprite.gameObject.layer == 12)
+            {
+                if (active)
+                {
+                    sprite.color = riderColour;
+                }
+                else
+                {
+                    Destroy(sprite.gameObject);
+                }
+            }
+            else if (sprite.gameObject.layer != 11)
             {
                 sprite.color = horseColour;
             }
@@ -32,28 +61,27 @@ public class Horse : MonoBehaviour
                 sprite.color = player.SwordColour;
             }
         }
+        
+        rider.color = riderColour;
+        sword.color = swordColour;
+        swordHandleRender.color = swordColour;
 
-        if (active)
-        {
-            rider.color = riderColour;
-            sword.color = swordColour;
-
-        }
-        else
-        {
-            rider.color = Color.black;
-            sword.color = Color.black;
-
-        }
     }
 
+    public void DeclareOffScript()
+    {
+        if (offScript)
+        {
+            Destroy(this);
+        }
+        offScript = true;
+        Destroy(rider);
+    }
 
 
     public void Hit(float damage)
     {
-        Debug.Log(damage);
-        HP -= damage;
-        if (HP < 0 && damage > RequiredForAFinalBlow)
+        if (handler.stillPlaying && armourRemaining != ArmourStartingValue)
         {
             Destroy(this);
         }
@@ -73,10 +101,9 @@ public class Horse : MonoBehaviour
         foreach (FixedJoint2D fixedJoint in fixedJoints)
         {
             fixedJoint.enabled = false;
+            
         }
 
         swordStabbingCode.enabled = false;
     }
-
-    
 }
