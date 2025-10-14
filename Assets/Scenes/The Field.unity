@@ -1893,6 +1893,10 @@ PrefabInstance:
       value: 93.6
       objectReference: {fileID: 0}
     - target: {fileID: 6951099072501002697, guid: 9495780dec16e1e4fa9b2c1128df0b84, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6951099072501002697, guid: 9495780dec16e1e4fa9b2c1128df0b84, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
