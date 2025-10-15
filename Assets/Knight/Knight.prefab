@@ -55,7 +55,7 @@ MonoBehaviour:
     relative: 0
   active: 1
   horsePrefab: {fileID: 1873674324957583812, guid: a98c8673c1bb938488b58ece55708a03, type: 3}
-  magnitude: 7500
+  magnitude: 1725
   rotation: []
   velocity: {x: 0, y: 0}
   forces: []

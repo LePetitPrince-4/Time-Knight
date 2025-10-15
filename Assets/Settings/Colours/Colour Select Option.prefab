@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Metal
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1f76f16fb5241534d918b67422d9eb15, type: 2}
-  m_sharedMaterial: {fileID: -3265364729790785716, guid: 1f76f16fb5241534d918b67422d9eb15, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ea611fb428e84fd40a5ff58b3b017090, type: 2}
+  m_sharedMaterial: {fileID: 1764073729501381103, guid: ea611fb428e84fd40a5ff58b3b017090, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -92,10 +92,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55
+  m_fontSize: 40
   m_fontSizeBase: 30
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 40
   m_fontStyle: 0

@@ -6,7 +6,7 @@ public class FlagPole : MonoBehaviour
 {
     public Vector2 startingPosition;
     public Vector2 endingPosition;
-    private const int maxScore = 50;
+    private const int maxScore = 36;
 
     [SerializeField] private GameObject flag;
     [SerializeField] private SpriteRenderer pole;

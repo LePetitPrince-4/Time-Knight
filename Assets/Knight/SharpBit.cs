@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class SharpBit : MonoBehaviour
 {
-    [SerializeField] private const float requiredMagnitude = 200f;
+    [SerializeField] private const float requiredMagnitude = 40f;
     public bool active = true;
     [SerializeField] public Horse horse;
+    public List<SpriteRenderer> flagBits;
     public void OnCollisionEnter2D(Collision2D other)
     {
         if (!horse)

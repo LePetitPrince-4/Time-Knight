@@ -47,11 +47,25 @@ public class SwordHandle : MonoBehaviour
         
         
         Destroy(connector.gameObject);
-
+        
         newSword.GetComponent<SpriteRenderer>().color = colour;
         connector = newSword.GetComponent<FixedJoint2D>();
         connector.connectedBody = transform.parent.GetComponent<Rigidbody2D>();
 
+        foreach (SpriteRenderer flag in swordStabbingCode.flagBits)
+        {
+            if (horse.active)
+            {
+                flag.color = horse.player.RiderColour;
+            }
+            else
+            {
+                Destroy(flag.gameObject);
+            }
+            
+        }
+        
+        
         snapped = false;
     }
 }

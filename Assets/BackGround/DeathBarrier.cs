@@ -6,12 +6,19 @@ using UnityEngine;
 public class DeathBarrier : MonoBehaviour
 {
     public const float Damage = 100000;
-    public const float deathVelocity = 500f;
+    public const float deathVelocity = 115f;
     public bool blocking = true;
+    [SerializeField]private bool testing;
     public void OnCollisionEnter2D(Collision2D other)
     {
-        Horse horse = other.gameObject.GetComponentInParent<Horse>(); 
+        Horse horse = other.gameObject.GetComponentInParent<Horse>();
 
+        if (testing)
+        {
+            other.gameObject.GetComponentInParent<ActivePlayer>()?.ReturnToTest();
+            return;
+        }
+        
          if (!blocking)
         {
             if (!horse)

@@ -115,9 +115,14 @@ public class KnightController : MonoBehaviour
 
     public void ResetHorse()
     {
+        ResetHorse( false);
+    }
+    
+    public void ResetHorse(bool setActive)
+    {
         enabled = true;
         Destroy(horseObject);
-        active = (forces.Count == 0);
+        active = setActive || (forces.Count == 0);
         GameObject newHorse = Instantiate(horsePrefab, transform);
 
         horseScript = newHorse.GetComponent<Horse>();

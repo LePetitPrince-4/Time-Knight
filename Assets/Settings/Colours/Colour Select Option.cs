@@ -75,20 +75,14 @@ public class ColourSelectOption : MonoBehaviour
 
     }
 
-    public Color GetColour()
+    public Colours GetColour()
     {
         Colours activeColour = coloursList[currentColour];
 
-        return activeColour.colour;
+        return activeColour;
     }
-
-    public Color GetSecondaryColour()
-    {
-        Colours activeColour = coloursList[currentColour];
-
-        return activeColour.secondaryColour;
-
-    }
+    
+    
     
     
 

@@ -390,6 +390,7 @@
 "Assets/Settings/Colours/Colour Select Option.cs"
 "Assets/Settings/Colours/Colours.cs"
 "Assets/Settings/Colours/ColourSelectScreen.cs"
+"Assets/Settings/Controls/PlayModeSelectScreen.cs"
 "Assets/Settings/Settings Handler.cs"
 -langversion:9.0
 /deterministic

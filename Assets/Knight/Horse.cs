@@ -15,14 +15,14 @@ public class Horse : MonoBehaviour
     [SerializeField] private SpriteRenderer swordHandleRender;
     
     [SerializeField] private SpriteRenderer rider;
-
+    public ActivePlayer player;
     public const int ArmourStartingValue = 8;
     public int armourRemaining = 8;
     public bool active;
     public bool offScript;
     public void Start()
     {
-        ActivePlayer player = GetComponentInParent<ActivePlayer>();
+        player = GetComponentInParent<ActivePlayer>();
         Color riderColour;
         Color swordColour;
         Color horseColour = player.horseColour;

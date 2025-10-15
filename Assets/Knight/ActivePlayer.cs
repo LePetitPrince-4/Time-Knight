@@ -28,15 +28,21 @@ public class ActivePlayer : MonoBehaviour
     public Vector2 directionOfCleanUp;
     public List<Rigidbody2D> rigidbody2CleanUp;
 
+    public PlayModeSelectScreen testScreen;
     private void Start()
+    {  
+        TranferPlayModeToKnight();
+        
+        flagPole.SetColor(RiderColour,SwordColour);
+    }
+
+
+    public void TranferPlayModeToKnight()
     {
         knightController.knightControls.relative = playerControls.relative;
         knightController.knightControls.compassBased = playerControls.compassBased;
 
-        
-        flagPole.SetColor(RiderColour,SwordColour);
     }
-    
 
     void Update()
     {
@@ -64,10 +70,21 @@ public class ActivePlayer : MonoBehaviour
 
 
     }
-    
+
+
+    public void ReturnToTest()
+    {
+        if (testScreen)
+        {
+            knightController.ResetHorse(true);
+            testScreen.ReturnFromTest();
+        }
+
+    }
 
     public void RemoveAllKnights()
     {
+        
         foreach (KnightController knight in knights)
         {
             Destroy(knight?.horseScript);
