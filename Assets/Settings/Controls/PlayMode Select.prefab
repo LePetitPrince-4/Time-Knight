@@ -772,7 +772,7 @@ MonoBehaviour:
   m_text: Confirm
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea611fb428e84fd40a5ff58b3b017090, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 1764073729501381103, guid: ea611fb428e84fd40a5ff58b3b017090, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1174,7 +1174,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 573, y: 6727}
-  m_SizeDelta: {x: 3200, y: 9600}
+  m_SizeDelta: {x: 3200, y: 7300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8980403486988854842
 CanvasRenderer:
@@ -1252,7 +1252,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -92.8}
-  m_SizeDelta: {x: 3200, y: 10000}
+  m_SizeDelta: {x: 6400, y: 15000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1737410444941613818
 CanvasRenderer:
@@ -1282,7 +1282,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1351265908, guid: 04b6a1d6243b38244b4dff16dd83902f, type: 3}
+  m_Sprite: {fileID: 582341159, guid: 04b6a1d6243b38244b4dff16dd83902f, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

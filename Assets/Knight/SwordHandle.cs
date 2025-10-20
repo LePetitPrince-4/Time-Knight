@@ -8,7 +8,7 @@ public class SwordHandle : MonoBehaviour
 
     [SerializeField] private FixedJoint2D connector;
     [SerializeField] private Horse horse;
-
+    private Transform parent;
     [SerializeField] private GameObject swordPrefab;
     private Color colour;
     private bool snapped;
@@ -37,9 +37,18 @@ public class SwordHandle : MonoBehaviour
         Debug.Log($"snapped for {delay} seconds");
         horse.swordStabbingCode.active = false;
         connector.enabled = false;
-        Transform parent = connector.transform.parent;
-        yield return new WaitForSecondsRealtime(delay);
+         parent = connector.transform.parent;
+        yield return new WaitForSeconds(delay);
+        Fix();
+    }
 
+    public void Fix()
+    {
+        if (!snapped)
+        {
+            return;
+        }
+        StopAllCoroutines();
         GameObject newSword = Instantiate(swordPrefab, parent);
         SharpBit swordStabbingCode = newSword.GetComponentInChildren<SharpBit>();
         horse.swordStabbingCode = swordStabbingCode;

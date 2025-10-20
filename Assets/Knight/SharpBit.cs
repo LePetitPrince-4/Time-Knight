@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SharpBit : MonoBehaviour
 {
-    [SerializeField] private const float requiredMagnitude = 40f;
+    public const float requiredMagnitude = 40f;
     public bool active = true;
     [SerializeField] public Horse horse;
     public List<SpriteRenderer> flagBits;
@@ -30,28 +30,38 @@ public class SharpBit : MonoBehaviour
         
         Debug.Log($"Magnitude:{magnitude}");
 
-        if (magnitude < requiredMagnitude || !active)
+        if (!active)
         {
             return;
         }
         if (other.gameObject.layer == 11)
         {
-            FixedJoint2D attachmentPoint = other.gameObject.GetComponent<FixedJoint2D>();
+            Armour armour = other.gameObject.GetComponent<Armour>();
 
-            if (attachmentPoint != null)
+            if (armour != null && armour.Hit(magnitude))
             {            
                 horse.swordHandle.Snap(1);
-                other.gameObject.GetComponentInParent<Horse>().armourRemaining--;
-                Destroy(attachmentPoint);
-                other.gameObject.GetComponentInParent<ActivePlayer>().rigidbody2CleanUp.Add(other.gameObject.GetComponent<Rigidbody2D>());
             }
             return;
         }
 
         if (other.gameObject.layer != 8)
         {
-            
-            other.gameObject.GetComponentInParent<Horse>()?.Hit(magnitude);
+            Horse otherHorse = other.gameObject.GetComponentInParent<Horse>();
+            if (otherHorse.Hit(magnitude))
+            {
+
+                if (horse.active)
+                {
+                    horse.swordHandle.Fix();
+                }
+                else
+                {
+                    horse.swordHandle.Snap(1);
+                }
+                
+
+            }
         }
     }
 

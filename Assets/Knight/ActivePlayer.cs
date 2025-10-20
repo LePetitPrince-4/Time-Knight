@@ -10,7 +10,7 @@ public class ActivePlayer : MonoBehaviour
 
     public int lostHorses;
     public int score;
-    public KnightHandler handler;
+    public Handler handler;
     public List<KnightController> knights;
 
     public PlayerControls playerControls = new();
@@ -22,13 +22,14 @@ public class ActivePlayer : MonoBehaviour
     public Color SwordColour;
     public Color RiderColour;
     public Color NPCRiderColour;
-
+    public Charge selectedCharge;
     public FlagPole flagPole;
 
     public Vector2 directionOfCleanUp;
     public List<Rigidbody2D> rigidbody2CleanUp;
 
     public PlayModeSelectScreen testScreen;
+    public Rigidbody2D activeHorseMiddle;
     private void Start()
     {  
         TranferPlayModeToKnight();
@@ -91,9 +92,8 @@ public class ActivePlayer : MonoBehaviour
         }
         
         knights.Clear();
-        handler.Invoke("NewDay", 5);
-        handler.EndRound();
-        
+        handler.EndRound(activeHorseMiddle);
+
 
     }
 
@@ -111,19 +111,29 @@ public class ActivePlayer : MonoBehaviour
         }
     }
 
-    public void FixedUpdate()
+
+    public void HandleReset()
     {
-        if (!handler.stillPlaying)
+
+        foreach (KnightController knight in knights)
         {
-            foreach (Rigidbody2D rigidbody in rigidbody2CleanUp)
+            if (knight.horseScript)
             {
-                if (rigidbody)
-                {
-                    rigidbody.velocity = directionOfCleanUp * handler.acceleration;
-                }
+                knight.horseScript.swordHandle.Fix();
+                handler.reset.upgradingKnights.Add(knight);
+                knight.horseScript.RebuildArmour();
             }
         }
-            
+
+        foreach (Rigidbody2D rigidbody in  rigidbody2CleanUp)
+        {
+            if (rigidbody)
+            {
+                Destroy(rigidbody.gameObject);
+
+            }
+        }
+        rigidbody2CleanUp.Clear();
         
     }
 }

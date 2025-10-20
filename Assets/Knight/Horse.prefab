@@ -61,6 +61,8 @@ MonoBehaviour:
   swordStabbingCode: {fileID: 1654695907574858936}
   swordHandle: {fileID: 5207078840919243472}
   horseHead: {fileID: 2118001547967844587}
+  horseMiddle: {fileID: 1318630816573157009}
+  horseBack: {fileID: 4935547124808059845}
   sword: {fileID: 5907916183708219244}
   swordHandleRender: {fileID: 1662092597911034098}
   rider: {fileID: 1300857768214599389}
@@ -68,6 +70,15 @@ MonoBehaviour:
   armourRemaining: 8
   active: 0
   offScript: 0
+  armours:
+  - {fileID: 3648183965406335272}
+  - {fileID: 8650080023151153202}
+  - {fileID: 4846958788343044679}
+  - {fileID: 5938735216033388617}
+  - {fileID: 1146264458335346411}
+  - {fileID: 2503676099120662699}
+  - {fileID: 7043232693465977739}
+  - {fileID: 4339209512227635314}
 --- !u!1 &2173975904126563347
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,7 +302,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 4.8
   m_LinearDrag: 1
-  m_AngularDrag: 60
+  m_AngularDrag: 300
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -656,7 +667,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 5.04
   m_LinearDrag: 1
-  m_AngularDrag: 60
+  m_AngularDrag: 300
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1126,7 +1137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 142521287124778018, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 142521287124778018, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1160,9 +1171,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 2908849283468575049, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: horse
+      value: 
+      objectReference: {fileID: 6357300864800489557}
+    - target: {fileID: 2908849283468575049, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: value
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5769961493992293456, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 7.999999
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5769961493992293456, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_ConnectedAnchor.y
@@ -1172,6 +1191,26 @@ PrefabInstance:
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 5611359368333392365}
+    - target: {fileID: 5769961493992293456, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_AutoConfigureConnectedAnchor
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067019727441282671, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_Size.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067019727441282671, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067019727441282671, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067019727441282671, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8249226575754849203, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_Name
       value: horse_armor_0 (1)
@@ -1194,6 +1233,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 142521287124778018, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
   m_PrefabInstance: {fileID: 783792530514921954}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2503676099120662699 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2908849283468575049, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+  m_PrefabInstance: {fileID: 783792530514921954}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5349eed826cd54499073c21566b0c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1470908021253620027
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1208,7 +1258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 142521287124778018, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 142521287124778018, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1242,9 +1292,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 2908849283468575049, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: horse
+      value: 
+      objectReference: {fileID: 6357300864800489557}
+    - target: {fileID: 2908849283468575049, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: value
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5769961493992293456, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -7.999999
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5769961493992293456, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_ConnectedAnchor.y
@@ -1254,6 +1312,22 @@ PrefabInstance:
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 6943673353016176746}
+    - target: {fileID: 5769961493992293456, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_AutoConfigureConnectedAnchor
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067019727441282671, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_Size.y
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067019727441282671, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_Offset.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067019727441282671, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 8249226575754849203, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_Name
       value: horse_armor_0 (1)
@@ -1276,6 +1350,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 142521287124778018, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
   m_PrefabInstance: {fileID: 1470908021253620027}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4339209512227635314 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2908849283468575049, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+  m_PrefabInstance: {fileID: 1470908021253620027}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5349eed826cd54499073c21566b0c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1945199888767209569
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1290,7 +1375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 142521287124778018, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 142521287124778018, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1324,22 +1409,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 2908849283468575049, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: horse
+      value: 
+      objectReference: {fileID: 6357300864800489557}
     - target: {fileID: 5769961493992293456, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_BreakForce
       value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 5769961493992293456, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: -7.999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 5769961493992293456, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 3.999977
-      objectReference: {fileID: 0}
-    - target: {fileID: 5769961493992293456, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 2118001547967844587}
+    - target: {fileID: 5769961493992293456, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_AutoConfigureConnectedAnchor
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067019727441282671, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_Size.y
+      value: 26
+      objectReference: {fileID: 0}
     - target: {fileID: 6785504244045959674, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_Size.y
       value: 22.716843
@@ -1362,6 +1451,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 142521287124778018, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
   m_PrefabInstance: {fileID: 1945199888767209569}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3648183965406335272 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2908849283468575049, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+  m_PrefabInstance: {fileID: 1945199888767209569}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5349eed826cd54499073c21566b0c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2861499289303031714
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1376,7 +1476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 142521287124778018, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 142521287124778018, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1410,9 +1510,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 2908849283468575049, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: horse
+      value: 
+      objectReference: {fileID: 6357300864800489557}
+    - target: {fileID: 2908849283468575049, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: value
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5769961493992293456, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -7.999999
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5769961493992293456, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_ConnectedAnchor.y
@@ -1422,6 +1530,26 @@ PrefabInstance:
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 5611359368333392365}
+    - target: {fileID: 5769961493992293456, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_AutoConfigureConnectedAnchor
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067019727441282671, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_Size.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067019727441282671, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067019727441282671, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067019727441282671, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8249226575754849203, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_Name
       value: horse_armor_0
@@ -1439,6 +1567,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+--- !u!114 &1146264458335346411 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2908849283468575049, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+  m_PrefabInstance: {fileID: 2861499289303031714}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5349eed826cd54499073c21566b0c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2759651222212338560 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 142521287124778018, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
@@ -1462,7 +1601,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 142521287124778018, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 142521287124778018, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1496,9 +1635,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 2908849283468575049, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: horse
+      value: 
+      objectReference: {fileID: 6357300864800489557}
+    - target: {fileID: 2908849283468575049, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: value
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5769961493992293456, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 7.999999
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5769961493992293456, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_ConnectedAnchor.y
@@ -1508,6 +1655,22 @@ PrefabInstance:
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 6943673353016176746}
+    - target: {fileID: 5769961493992293456, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_AutoConfigureConnectedAnchor
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067019727441282671, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_Size.y
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067019727441282671, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_Offset.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067019727441282671, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 8249226575754849203, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_Name
       value: horse_armor_0
@@ -1530,6 +1693,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 142521287124778018, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
   m_PrefabInstance: {fileID: 5323494262401028802}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7043232693465977739 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2908849283468575049, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+  m_PrefabInstance: {fileID: 5323494262401028802}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5349eed826cd54499073c21566b0c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5788549326534594939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1548,7 +1722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 142521287124778018, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 142521287124778018, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1582,9 +1756,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 2908849283468575049, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: horse
+      value: 
+      objectReference: {fileID: 6357300864800489557}
+    - target: {fileID: 2908849283468575049, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5769961493992293456, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 7.999999
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5769961493992293456, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_ConnectedAnchor.y
@@ -1594,6 +1776,14 @@ PrefabInstance:
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 2118001547967844587}
+    - target: {fileID: 5769961493992293456, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_AutoConfigureConnectedAnchor
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067019727441282671, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_Size.y
+      value: 26
+      objectReference: {fileID: 0}
     - target: {fileID: 8249226575754849203, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_Name
       value: horse_armor_1
@@ -1620,6 +1810,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 142521287124778018, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
   m_PrefabInstance: {fileID: 5788549326534594939}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8650080023151153202 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2908849283468575049, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+  m_PrefabInstance: {fileID: 5788549326534594939}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5349eed826cd54499073c21566b0c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6497377205318872083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1647,14 +1848,6 @@ PrefabInstance:
     - target: {fileID: 2513813372416012562, guid: 942cf95e0a2a6dc45ab8b3cf18545275, type: 3}
       propertyPath: m_Offset.y
       value: -12
-      objectReference: {fileID: 0}
-    - target: {fileID: 3650107645021523242, guid: 942cf95e0a2a6dc45ab8b3cf18545275, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 6.000003
-      objectReference: {fileID: 0}
-    - target: {fileID: 3650107645021523242, guid: 942cf95e0a2a6dc45ab8b3cf18545275, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 58.300003
       objectReference: {fileID: 0}
     - target: {fileID: 3650107645021523242, guid: 942cf95e0a2a6dc45ab8b3cf18545275, type: 3}
       propertyPath: m_ConnectedRigidBody
@@ -1761,7 +1954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 142521287124778018, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 142521287124778018, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1795,9 +1988,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 2908849283468575049, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: horse
+      value: 
+      objectReference: {fileID: 6357300864800489557}
+    - target: {fileID: 2908849283468575049, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: value
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5769961493992293456, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -7.999999
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5769961493992293456, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_ConnectedAnchor.y
@@ -1807,6 +2008,22 @@ PrefabInstance:
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 1318630816573157009}
+    - target: {fileID: 5769961493992293456, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_AutoConfigureConnectedAnchor
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067019727441282671, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067019727441282671, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067019727441282671, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8249226575754849203, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_Name
       value: horse_armor_0
@@ -1824,6 +2041,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+--- !u!114 &4846958788343044679 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2908849283468575049, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+  m_PrefabInstance: {fileID: 7718488427069332238}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5349eed826cd54499073c21566b0c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7703339059576219436 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 142521287124778018, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
@@ -1847,7 +2075,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 142521287124778018, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 142521287124778018, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1881,9 +2109,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 2908849283468575049, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: horse
+      value: 
+      objectReference: {fileID: 6357300864800489557}
+    - target: {fileID: 2908849283468575049, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: value
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5769961493992293456, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 7.999999
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5769961493992293456, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_ConnectedAnchor.y
@@ -1893,6 +2129,22 @@ PrefabInstance:
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 1318630816573157009}
+    - target: {fileID: 5769961493992293456, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_AutoConfigureConnectedAnchor
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067019727441282671, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067019727441282671, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067019727441282671, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8249226575754849203, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
       propertyPath: m_Name
       value: horse_armor_0 (1)
@@ -1910,6 +2162,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+--- !u!114 &5938735216033388617 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2908849283468575049, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}
+  m_PrefabInstance: {fileID: 8805926178579716352}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5349eed826cd54499073c21566b0c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8921271798873351458 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 142521287124778018, guid: 4a964fa2bb49faf40ae1ee88380d5a98, type: 3}

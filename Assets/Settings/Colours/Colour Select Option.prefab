@@ -316,6 +316,8 @@ MonoBehaviour:
   coloursList: []
   colourText: {fileID: 6154343444007800835}
   highlightAura: {fileID: 8332228993415935400}
-  colourShowcase: {fileID: 6879828228350418180}
+  colourShowcase:
+  - {fileID: 6879828228350418180}
+  - {fileID: 0}
   currentColour: 0
   pairedColourSelect: {fileID: 0}

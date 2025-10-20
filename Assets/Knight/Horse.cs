@@ -6,11 +6,14 @@ using UnityEngine;
 public class Horse : MonoBehaviour
 {
 
-    public KnightHandler handler;
+    public Handler handler;
     [SerializeField] public SharpBit swordStabbingCode;
     [SerializeField] public SwordHandle swordHandle;
 
      public Rigidbody2D horseHead;
+     public Rigidbody2D horseMiddle;
+     public Transform horseBack;
+
     [SerializeField] private SpriteRenderer sword;
     [SerializeField] private SpriteRenderer swordHandleRender;
     
@@ -20,15 +23,21 @@ public class Horse : MonoBehaviour
     public int armourRemaining = 8;
     public bool active;
     public bool offScript;
+    public List<Armour> armours;
+
     public void Start()
     {
         player = GetComponentInParent<ActivePlayer>();
+
         Color riderColour;
         Color swordColour;
         Color horseColour = player.horseColour;
 
         if (active)
         {
+            
+            player.activeHorseMiddle = horseMiddle;
+
             riderColour = player.RiderColour;
             swordColour = player.SwordColour;
         }
@@ -61,6 +70,11 @@ public class Horse : MonoBehaviour
                 sprite.color = player.SwordColour;
             }
         }
+
+        foreach (Armour armour in armours)
+        {
+            armour.enchantment.color = player.RiderColour;
+        }
         
         rider.color = riderColour;
         sword.color = swordColour;
@@ -79,16 +93,25 @@ public class Horse : MonoBehaviour
     }
 
 
-    public void Hit(float damage)
+    public bool Hit(float damage)
     {
-        if (handler.stillPlaying && armourRemaining != ArmourStartingValue)
+        if (handler.stillPlaying && armourRemaining != ArmourStartingValue && damage > SharpBit.requiredMagnitude)
         {
             Destroy(this);
+            return true;
         }
+
+        return false;
     }
 
     private void OnDestroy()
     {
+        foreach (Armour armour in armours)
+        {
+            armour?.Hit(1000000f);
+        }
+        
+        
         List<HingeJoint2D> hinges = new List<HingeJoint2D>(gameObject.GetComponentsInChildren<HingeJoint2D>());
 
         foreach (HingeJoint2D hinge in hinges)
@@ -106,4 +129,16 @@ public class Horse : MonoBehaviour
 
         swordStabbingCode.enabled = false;
     }
+
+    public void RebuildArmour()
+    {
+        for (int i = 0; i < armours.Count;i ++ )
+        {
+            Armour armour = armours[i];
+            armour.ReattachToHorse();
+        }
+    }
+    
+    
+    
 }

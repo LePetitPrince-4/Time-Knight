@@ -10,7 +10,7 @@ public class ColourSelectOption : MonoBehaviour
     [SerializeField] private List<Colours> coloursList;
     [SerializeField] private TMP_Text colourText;
     [SerializeField] private Image highlightAura;
-    [SerializeField] private Image colourShowcase;
+    [SerializeField] private List<Image> colourShowcase;
     public int currentColour = 0;
 
     [SerializeField] private ColourSelectOption pairedColourSelect;
@@ -71,7 +71,13 @@ public class ColourSelectOption : MonoBehaviour
 
         }
         colourText.text = activeColour.name;
-        colourShowcase.color = activeColour.colour;
+
+        foreach (Image showcase in colourShowcase)
+        {
+            showcase.color = activeColour.colour;
+
+        }
+        
 
     }
 

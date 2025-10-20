@@ -18,8 +18,8 @@ TagManager:
   - DeathBarrier
   - Armour
   - Flag
-  - 
-  - 
+  - Enchantments
+  - HorseShoe
   - 
   - 
   - 
@@ -38,6 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackGround
+    uniqueID: 2962226265
+    locked: 0
+  - name: HorseShoe
+    uniqueID: 2503087547
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

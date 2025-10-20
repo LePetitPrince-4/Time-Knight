@@ -197,11 +197,11 @@ FixedJoint2D:
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 0}
   m_BreakForce: Infinity
-  m_BreakTorque: 1000000
-  m_BreakAction: 2
+  m_BreakTorque: Infinity
+  m_BreakAction: 0
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 6.000003, y: 58.300003}
   m_DampingRatio: 0
   m_Frequency: 0
 --- !u!1 &6115706241381046517

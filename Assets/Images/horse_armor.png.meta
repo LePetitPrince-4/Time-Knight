@@ -140,11 +140,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 75
-        width: 16
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 100
+        width: 32
+        height: 50
+      alignment: 9
+      pivot: {x: 1, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -161,11 +161,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 50
-        width: 16
+        y: 75
+        width: 32
         height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -182,11 +182,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 25
-        width: 16
+        y: 50
+        width: 32
         height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -204,10 +204,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 32
+        height: 50
+      alignment: 9
+      pivot: {x: 1, y: 0.75}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -220,13 +220,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: horse_armor_Full
+      name: horse_armor_1
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 100
+        width: 64
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,8 +234,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a3d12e0d05bbc047bd71b3c93a9a206
-      internalID: -1351265908
+      spriteID: af029362ef430f947a0cd1d2718fea77
+      internalID: 582341159
       vertices: []
       indices: 
       edges: []
@@ -252,13 +252,13 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       horse_armor_0: -1331794372
+      horse_armor_1: 582341159
       horse_armor_2: 206269803
       horse_armor_3: -127531378
       horse_armor_4: 1641187822
       horse_armor_5: -1867289596
       horse_armor_6: 115733957
       horse_armor_7: 1128134659
-      horse_armor_Full: -1279754366
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

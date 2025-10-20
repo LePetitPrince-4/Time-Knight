@@ -46,20 +46,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\BackGround\DeathBarrier.cs" />
+    <Compile Include="Assets\Settings\Settings Handler.cs" />
     <Compile Include="Assets\BackGround\FlagPole.cs" />
     <Compile Include="Assets\Camera\Camera Script.cs" />
+    <Compile Include="Assets\Knight\SwordHandle.cs" />
     <Compile Include="Assets\Settings\Colours\ColourSelectScreen.cs" />
     <Compile Include="Assets\Knight\KnightControls.cs" />
+    <Compile Include="Assets\Settings\Charge\Charge.cs" />
     <Compile Include="Assets\Settings\Colours\Colours.cs" />
+    <Compile Include="Assets\Settings\Controls\PlayModeSelectScreen.cs" />
     <Compile Include="Assets\Knight\SharpBit.cs" />
+    <Compile Include="Assets\Knight\Handler.cs" />
+    <Compile Include="Assets\Knight\RoundReset.cs" />
+    <Compile Include="Assets\Knight\Armour.cs" />
+    <Compile Include="Assets\Knight\Horse.cs" />
     <Compile Include="Assets\Knight\Knight Controller.cs" />
     <Compile Include="Assets\Knight\ActivePlayer.cs" />
     <Compile Include="Assets\Settings\Colours\Colour Select Option.cs" />
-    <Compile Include="Assets\Knight\KnightHandler.cs" />
-    <Compile Include="Assets\Settings\Settings Handler.cs" />
-    <Compile Include="Assets\Knight\SwordHandle.cs" />
-    <Compile Include="Assets\Settings\Controls\PlayModeSelectScreen.cs" />
-    <Compile Include="Assets\Knight\Horse.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -712,56 +715,17 @@
     <Reference Include="Unity.2D.IK.Runtime">
       <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Burst.Editor">
-      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Common.Path.Editor">
-      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.2D.Common.Path.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.PixelPerfect.Editor">
-      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Aseprite.Common">
-      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.2D.Aseprite.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Tilemap.Extras.Editor">
-      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Collections">
-      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.Collections.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.SpriteShape.Runtime">
-      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.PixelPerfect">
-      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Aseprite.Editor">
-      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.2D.Aseprite.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="PsdPlugin">
       <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst.Editor">
+      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst">
       <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Common.Path.Editor">
+      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.2D.Common.Path.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
@@ -787,8 +751,20 @@
     <Reference Include="Unity.VisualScripting.Core.Editor">
       <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    <Reference Include="Unity.Rider.Editor">
+      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.PixelPerfect.Editor">
+      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Aseprite.Common">
+      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.2D.Aseprite.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Flow">
+      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
       <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
@@ -796,8 +772,17 @@
     <Reference Include="Unity.InternalAPIEngineBridge.001">
       <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.Common.Runtime">
       <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Tilemap.Extras.Editor">
+      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
@@ -805,14 +790,26 @@
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
       <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.InternalAPIEditorBridge.001">
-      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
+    <Reference Include="Unity.Collections">
+      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PlasticSCM.Editor">
+      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Psdimporter.Editor">
       <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.InternalAPIEditorBridge.001">
+      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.SpriteShape.Runtime">
+      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
       <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.PixelPerfect">
+      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
       <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
@@ -820,8 +817,14 @@
     <Reference Include="Unity.2D.Common.Editor">
       <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Aseprite.Editor">
+      <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.2D.Aseprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>C:\Personal Projects\Unity Games\Time-Knight\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>

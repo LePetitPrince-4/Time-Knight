@@ -1,60 +1,59 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Vector2 = UnityEngine.Vector2;
+using Vector3 = UnityEngine.Vector3;
 
 public class CameraScript : MonoBehaviour
 {
-    [SerializeField]private List<Transform> activeKnight;
-    private float targetPosition;
+    public Rigidbody2D targetLocation;
+    public Vector2 startingLocation;
+    public float lerp;
+    public float speed;
 
-    // Update is called once per frame
-    void Update()
+    public void GoToTarget(Rigidbody2D target, float time)
     {
-        if (activeKnight.Count == 2)
+        
+        targetLocation = target;
+        
+
+        Vector3 startLoc = transform.position;
+        
+        startingLocation = startLoc;
+        
+        if (time > 0)
         {
-
-            Vector2 distanceBetweenPlanes = activeKnight[0].transform.position - activeKnight[1].transform.position;
-            float aspectRatio = Camera.main.aspect;
-
-            distanceBetweenPlanes.x = Mathf.Abs(distanceBetweenPlanes.x);
-            distanceBetweenPlanes.y = Mathf.Abs(distanceBetweenPlanes.y);
-
-            float cameraSize = Mathf.Max(10, distanceBetweenPlanes.x / aspectRatio, distanceBetweenPlanes.y);
-
-
-            Camera.main.orthographicSize = cameraSize;
-            Vector3 position = Vector2.Lerp(activeKnight[0].transform.position, activeKnight[1].transform.position, 0.5f);
-
-            position.z = -10;
-
-
-
-            //position = Vector3.Lerp(gameObject.transform.position, position, Time.unscaledDeltaTime);
-
-
-
-            gameObject.transform.position = position;
-        }else if (activeKnight.Count == 1)
+            enabled = true;
+        }
+        else
         {
-            Camera.main.orthographicSize = 10;
-            Vector3 position = activeKnight[0].position;
-            position.z = -10;
+            Vector3 targetLoc = target.position;
 
-
-            gameObject.transform.position = position;
-
-
+            targetLoc.z = -10;
+            
+            transform.position = targetLoc;
+            return;
         }
 
+        speed = time;
 
+        lerp = 0;
     }
 
-    public void RemoveKnight(Transform transform)
+    public void Update()
     {
-        if (activeKnight.Contains(transform))
-        {
-            activeKnight.Remove(transform);
-        }
+        lerp += Time.unscaledDeltaTime / speed;
+
+        Vector3 targetLoc= Vector2.Lerp(startingLocation, targetLocation.position, lerp);
+
+        
+
+        targetLoc.z = -10;
+        transform.position = targetLoc;
+        
     }
+    
+
 }

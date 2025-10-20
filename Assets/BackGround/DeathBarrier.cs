@@ -27,13 +27,10 @@ public class DeathBarrier : MonoBehaviour
             }
         }
         else if ( other.gameObject.layer == 11)
-        {
-            if (other.gameObject.GetComponent<FixedJoint2D>())
-            Destroy(other.gameObject.GetComponent<FixedJoint2D>());
-            horse.armourRemaining--;
-            other.gameObject.GetComponentInParent<ActivePlayer>().rigidbody2CleanUp.Add(other.gameObject.GetComponent<Rigidbody2D>());
-
-        }else if(other.gameObject.layer == 8)
+        { 
+            other.gameObject.GetComponent<Armour>()?.Hit(Damage);
+        }
+         else if(other.gameObject.layer == 8)
         {
             GameObject otherGameObject = other.gameObject;
 
