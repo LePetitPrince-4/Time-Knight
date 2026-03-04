@@ -2,8 +2,6 @@
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
-
 If any vulnerabilities are found I will respond ASAP
 
 I will also credit you appropriatelly
