@@ -4,9 +4,9 @@
 
 Use this section to tell people how to report a vulnerability.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+If any vulnerabilities are found I will respond ASAP
+
+I will also credit you appropriatelly
 
 email
 security@lucas-leprince.com
